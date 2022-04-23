@@ -2,51 +2,51 @@
     {
         "name": "User",
         "icon": "folder-home",
-        "path": "/User/"
+        "path": "/user/"
     },
     {
         "name": "Desktop",
         "icon": "folder",
-        "path": "/User/Desktop"
+        "path": "/user/desktop"
     },
     {
         "name": "Documents",
         "icon": "folder-text",
-        "path": "/User/Documents"
+        "path": "/user/documents"
     },
     {
         "name": "Download",
         "icon": "folder-download",
-        "path": "/User/Download"
+        "path": "/user/download"
     },
     {
         "name": "Movies",
         "icon": "folder",
-        "path": "/User/Movies"
+        "path": "/user/movies"
     },
     {
         "name": "Music",
         "icon": "folder-music",
-        "path": "/User/Music"
+        "path": "/user/music"
     },
     {
         "name": "Pictures",
         "icon": "folder-image",
-        "path": "/User/Pictures"
+        "path": "/user/pictures"
     },
     {
         "name": "Public",
         "icon": "folder-heart",
-        "path": "/User/Public"
+        "path": "/user/public"
     },
     {
         "name": "Sites",
         "icon": "folder",
-        "path": "/User/Sites"
+        "path": "/user/sites"
     },
     {
         "name": "Configs",
         "icon": "folder-cog",
-        "path": "/User/Configs"
+        "path": "/user/configs"
     }
 ]

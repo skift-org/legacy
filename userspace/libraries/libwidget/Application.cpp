@@ -35,7 +35,7 @@ Application::Application()
         {
             auto new_theme = value.as_string();
 
-            theme_load(IO::format("/Files/Themes/{}.json", value.as_string()));
+            theme_load(IO::format("/files/themes/{}.json", value.as_string()));
 
             for (size_t i = 0; i < _windows.count(); i++)
             {
@@ -54,7 +54,7 @@ Application::Application()
             }
         });
 
-    _connection = IO::Socket::connect("/Session/compositor.ipc").unwrap();
+    _connection = IO::Socket::connect("/session/compositor.ipc").unwrap();
 
     _connection_notifier = own<Async::Notifier>(_connection, POLL_READ, [this]()
         {

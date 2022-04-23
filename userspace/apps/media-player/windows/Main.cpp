@@ -10,7 +10,7 @@ Main::Main() : Window(WINDOW_NONE | WINDOW_RESIZABLE)
 {
     size(Math::Vec2i(700, 500));
 
-    auto cover = root()->add<Cover>(Graphic::Bitmap::load_from_or_placeholder("/Applications/media-player/cover.png"));
+    auto cover = root()->add<Cover>(Graphic::Bitmap::load_from_or_placeholder("/applications/media-player/cover.png"));
 
     cover->flags(Widget::Element::FILL);
 

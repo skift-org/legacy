@@ -21,7 +21,7 @@ static RefPtr<Icon> icon_load(String name)
 
     for (size_t i = 0; i < __ICON_SIZE_COUNT; i++)
     {
-        auto path = IO::format("/Files/Icons/{}.svg", name);
+        auto path = IO::format("/files/icons/{}.svg", name);
         auto bitmap_or_result = Bitmap::load_from(path, _icon_sizes[i]);
 
         if (bitmap_or_result.success())

@@ -14,8 +14,8 @@ namespace About
 static auto logo()
 {
     auto logo_path = theme_is_dark()
-                         ? "/Applications/about/logo-white.png"
-                         : "/Applications/about/logo-black.png";
+                         ? "/applications/about/logo-white.png"
+                         : "/applications/about/logo-black.png";
 
     auto logo_image = Bitmap::load_from_or_placeholder(logo_path);
 
@@ -25,7 +25,7 @@ static auto logo()
 static auto license()
 {
     return outline_button("License", [] {
-        auto editor = texteditor(TextModel::open("/Files/license.md"));
+        auto editor = texteditor(TextModel::open("/files/license.md"));
         editor->font(Font::get("mono").unwrap());
         editor->focus();
 

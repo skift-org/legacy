@@ -15,11 +15,11 @@ int kill(int pid)
 
 int killall(String name)
 {
-    IO::File file{"/System/processes", HJ_OPEN_READ};
+    IO::File file{"/system/processes", HJ_OPEN_READ};
 
     if (!file.exist())
     {
-        IO::errln("/System/processes not found");
+        IO::errln("/system/processes not found");
         return PROCESS_FAILURE;
     }
 

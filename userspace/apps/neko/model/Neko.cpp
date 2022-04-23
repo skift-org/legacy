@@ -20,7 +20,7 @@ Math::Recti Neko::sprite()
 
 Neko::Neko(Math::Vec2f starting_position)
     : _position(starting_position),
-      _sprites(Graphic::Bitmap::load_from_or_placeholder("/Applications/neko/sprites.png")),
+      _sprites(Graphic::Bitmap::load_from_or_placeholder("/applications/neko/sprites.png")),
       _behavior(own<ChaseMouse>())
 {
 }

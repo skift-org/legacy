@@ -13,7 +13,7 @@ void userspace_initialize()
 {
     Kernel::logln("Starting the userspace...");
 
-    Launchpad *init_lauchpad = launchpad_create("init", "/System/Utilities/init");
+    Launchpad *init_lauchpad = launchpad_create("init", "/system/utilities/init");
     launchpad_flags(init_lauchpad, TASK_WAITABLE | TASK_USER);
 
     Stream *serial_device = stream_open("/Devices/serial", HJ_OPEN_WRITE | HJ_OPEN_READ);

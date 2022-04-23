@@ -20,7 +20,7 @@ Opt<String> find_command_path(String command)
     }
     else
     {
-        auto application_path = IO::format("/Applications/{}/{}", command, command);
+        auto application_path = IO::format("/applications/{}/{}", command, command);
 
         IO::File application_file{application_path};
         if (application_file.exist())

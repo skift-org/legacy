@@ -111,7 +111,7 @@ index 0c780b24..d75c7d23 100644
  NATIVE_LIB_DIRS='/usr/local/lib /lib /usr/lib'
  case "${target}" in
 +*-*-skift*)
-+  NATIVE_LIB_DIRS='/System/Libraries'
++  NATIVE_LIB_DIRS='/system/libraries'
 +  ;;
  
  *-*-dragonfly*)

@@ -58,9 +58,9 @@ int main(int argc, char **argv)
 
     IO::out("{} second{}\n", seconds, seconds == 1 ? "" : "s");
 
-    IO::out("\e[16C SHELL: /Applications/shell\n");
-    IO::out("\e[16C TERMINAL: /Applications/terminal\n");
-    IO::out("\e[16C COMPOSITOR: /Applications/compositor\n");
+    IO::out("\e[16C SHELL: /applications/shell\n");
+    IO::out("\e[16C TERMINAL: /applications/terminal\n");
+    IO::out("\e[16C COMPOSITOR: /applications/compositor\n");
     IO::out("\e[16C MEMORY: \e[m{}Mib / {}Mib\n", (int)(status.used_ram / (1024 * 1024)), (int)(status.total_ram / (1024 * 1024)));
 
     IO::out("\n");

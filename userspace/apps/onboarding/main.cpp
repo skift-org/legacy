@@ -79,7 +79,7 @@ auto illustration(auto state)
     return Widget::min_height(
         180,
         Widget::image(
-            Graphic::Bitmap::load_from_or_placeholder(IO::format("/Applications/onboarding/illustration{}.png", state)),
+            Graphic::Bitmap::load_from_or_placeholder(IO::format("/applications/onboarding/illustration{}.png", state)),
             Graphic::BitmapScaling::COVER));
 }
 

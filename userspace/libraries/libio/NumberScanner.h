@@ -10,8 +10,7 @@ namespace IO
 
 struct NumberScanner
 {
-private:
-    int _base = 10;
+    int base = 10;
 
 public:
     static NumberScanner binary() { return {2}; }
@@ -26,7 +25,7 @@ public:
     {
         char c = scan.peek();
 
-        for (int i = 0; i < _base; i++)
+        for (int i = 0; i < base; i++)
         {
             if ((Strings::LOWERCASE_XDIGITS[i] == c) ||
                 (Strings::UPPERCASE_XDIGITS[i] == c))
@@ -42,7 +41,7 @@ public:
     {
         char c = scan.peek();
 
-        for (int i = 0; i < _base; i++)
+        for (int i = 0; i < base; i++)
         {
             if ((Strings::LOWERCASE_XDIGITS[i] == c) ||
                 (Strings::UPPERCASE_XDIGITS[i] == c))
@@ -66,7 +65,7 @@ public:
 
         while (!scan.ended() && is_digit(scan))
         {
-            value = value * _base;
+            value = value * base;
             value += scan_digit(scan).unwrap();
         }
 
@@ -108,12 +107,12 @@ public:
 
         if (scan.skip('.'))
         {
-            double multiplier = (1.0 / _base);
+            double multiplier = (1.0 / base);
 
             while (is_digit(scan))
             {
                 fpart += multiplier * scan_digit(scan).unwrap();
-                multiplier *= (1.0 / _base);
+                multiplier *= (1.0 / base);
             }
         }
 
@@ -125,7 +124,7 @@ public:
             exp = scan_int(scan).unwrap_or(0);
         }
 
-        return (ipart + fpart) * pow(_base, exp);
+        return (ipart + fpart) * pow(base, exp);
     }
 };
 

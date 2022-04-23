@@ -24,8 +24,8 @@ void start_desktop()
     int splash_screen_pid;
     process_run("splash-screen", &splash_screen_pid, 0);
 
-    start_service("settings-service", "/Session/settings.ipc");
-    start_service("compositor", "/Session/compositor.ipc");
+    start_service("settings-service", "/session/settings.ipc");
+    start_service("compositor", "/session/compositor.ipc");
     process_run("panel", nullptr, 0);
 
     if constexpr (__CONFIG_IS_RELEASE__)
@@ -61,7 +61,7 @@ void start_headless()
 int main(int, const char *[])
 {
     IO::logln("Loading environement variables...");
-    IO::File file{"/Configs/environment.json", HJ_OPEN_READ};
+    IO::File file{"/configs/environment.json", HJ_OPEN_READ};
 
     if (file.exist())
     {

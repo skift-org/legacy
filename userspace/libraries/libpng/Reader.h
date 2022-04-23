@@ -28,7 +28,7 @@ private:
     HjResult uncompress(IO::MemoryWriter &uncompressed_writer);
     HjResult unfilter(uint8_t *in, uint8_t *out);
     HjResult unfilter_scanline(uint8_t *recon, const uint8_t *scanline, const uint8_t *precon,
-        size_t bytewidth, Png::FilterType filterType, size_t length);
+    size_t bytewidth, Png::FilterType filterType, size_t length);
     HjResult convert(uint8_t *data);
     HjResult read_chunks();
 

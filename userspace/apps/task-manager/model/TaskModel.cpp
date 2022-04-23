@@ -92,7 +92,7 @@ Widget::Var TaskModel::data(int row, int column)
 
 void TaskModel::update()
 {
-    IO::File file{"/System/processes", HJ_OPEN_READ};
+    IO::File file{"/system/processes", HJ_OPEN_READ};
 
     if (!file.exist())
     {

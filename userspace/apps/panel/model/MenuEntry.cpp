@@ -19,11 +19,11 @@ MenuEntry::MenuEntry(String id, const Json::Value &value)
     value.with("command", [this](auto &v)
         { command = v.as_string(); });
 
-    auto bitmap = Graphic::Bitmap::load_from(IO::format("/Applications/{}/{}.png", id, id));
+    auto bitmap = Graphic::Bitmap::load_from(IO::format("/applications/{}/{}.png", id, id));
 
     if (!bitmap.success())
     {
-        bitmap = Graphic::Bitmap::load_from("/Files/missing.png");
+        bitmap = Graphic::Bitmap::load_from("/files/missing.png");
     }
 
     image = bitmap.unwrap();
@@ -38,7 +38,7 @@ Vec<MenuEntry> MenuEntry::load()
         return entries;
     }
 
-    IO::Directory directory{"/Applications"};
+    IO::Directory directory{"/applications"};
 
     for (auto &entry : directory.entries())
     {
@@ -47,7 +47,7 @@ Vec<MenuEntry> MenuEntry::load()
             continue;
         }
 
-        auto path = IO::format("/Applications/{}/manifest.json", entry.name);
+        auto path = IO::format("/applications/{}/manifest.json", entry.name);
 
         IO::File manifest_file{path, HJ_OPEN_READ};
 

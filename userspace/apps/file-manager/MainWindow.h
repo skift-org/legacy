@@ -33,7 +33,7 @@ public:
         auto browser = bookmarks_and_browser->add<FilePicker::FileBrowser>(navigation);
 
         browser->on_element_selected = [&](String &path) {
-            auto l = launchpad_create("open", "/System/Utilities/open");
+            auto l = launchpad_create("open", "/system/utilities/open");
             launchpad_argument(l, path.cstring());
             launchpad_launch(l, nullptr);
         };

@@ -16,7 +16,7 @@ const char *process_name()
 
 HjResult process_run(const char *command, int *pid, TaskFlags flags)
 {
-    Launchpad *launchpad = launchpad_create("shell", "/Applications/shell/shell");
+    Launchpad *launchpad = launchpad_create("shell", "/applications/shell/shell");
 
     launchpad_flags(launchpad, flags);
     launchpad_argument(launchpad, "-c");

@@ -68,7 +68,7 @@ Shell::ArgParseResult gfxmode_get()
 
 HjResult gfxmode_set_compositor(IOCallDisplayModeArgs mode)
 {
-    auto connection = TRY(IO::Socket::connect("/Session/compositor.ipc"));
+    auto connection = TRY(IO::Socket::connect("/session/compositor.ipc"));
 
     CompositorMessage message{
         .type = COMPOSITOR_MESSAGE_SET_RESOLUTION,

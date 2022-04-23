@@ -170,7 +170,7 @@ void LegacyKeyboard::handle_key(Key key, KeyMotion motion)
 
 LegacyKeyboard::LegacyKeyboard(DeviceAddress address) : LegacyDevice(address, DeviceClass::KEYBOARD)
 {
-    _keymap = keyboard_load_keymap("/Files/Keyboards/" CONFIG_KEYBOARD_LAYOUT ".kmap");
+    _keymap = keyboard_load_keymap("/files/keyboards/" CONFIG_KEYBOARD_LAYOUT ".kmap");
 }
 
 void LegacyKeyboard::handle_interrupt()

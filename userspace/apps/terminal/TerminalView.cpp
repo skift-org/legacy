@@ -56,7 +56,7 @@ TerminalView::TerminalView()
 
     _cursor_blink_timer->start();
 
-    Launchpad *shell_launchpad = launchpad_create("shell", "/Applications/shell/shell");
+    Launchpad *shell_launchpad = launchpad_create("shell", "/applications/shell/shell");
     launchpad_handle(shell_launchpad, _terminal_device.client, 0);
     launchpad_handle(shell_launchpad, _terminal_device.client, 1);
     launchpad_handle(shell_launchpad, _terminal_device.client, 2);

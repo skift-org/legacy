@@ -69,5 +69,5 @@ void device_info_initialize()
 {
     scheduler_running()
         ->domain()
-        .link(IO::Path::parse("/System/devices"), make<FsDeviceInfo>());
+        .link(IO::Path::parse("/system/devices"), make<FsDeviceInfo>());
 }

@@ -64,7 +64,7 @@ CONFIG_DISPLAY        ?=sdl
 CONFIG_VMACHINE       ?=qemu
 
 # Set the default keyboard layout.
-# Possible values: (check the content of /System/Keyboard)
+# Possible values: (check the content of /files/keyboards)
 CONFIG_KEYBOARD_LAYOUT?=en_us
 
 # Set the bootloader.

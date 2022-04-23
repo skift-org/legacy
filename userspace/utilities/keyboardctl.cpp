@@ -9,11 +9,11 @@
 
 Shell::ArgParseResult loadkey_list_keymap()
 {
-    IO::Directory keymap_directory{"/Files/Keyboards"};
+    IO::Directory keymap_directory{"/files/keyboards"};
 
     if (!keymap_directory.exist())
     {
-        IO::errln("keyboardctl: Failed to query keymaps from /Files/Keyboards");
+        IO::errln("keyboardctl: Failed to query keymaps from /files/keyboards");
         return Shell::ArgParseResult::FAILURE;
     }
 
@@ -123,7 +123,7 @@ int main(int argc, const char *argv[])
     });
 
     args.option_string('s', "set", "Set the current keyboard keymap.", [&](auto &keymap_name) {
-        auto kaymap_path = IO::format("/Files/Keyboards/{}.kmap", keymap_name);
+        auto kaymap_path = IO::format("/files/keyboards/{}.kmap", keymap_name);
         return loadkey_set_keymap(keyboard_handle, kaymap_path);
     });
 

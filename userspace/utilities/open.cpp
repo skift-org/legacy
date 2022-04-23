@@ -4,8 +4,8 @@
 #include <libjson/Json.h>
 #include <libsystem/process/Launchpad.h>
 
-#define FILE_EXTENSIONS_DATABASE_PATH "/Configs/open/file-extensions.json"
-#define FILE_TYPES_DATABASE_PATH "/Configs/open/file-types.json"
+#define FILE_EXTENSIONS_DATABASE_PATH "/configs/open/file-extensions.json"
+#define FILE_TYPES_DATABASE_PATH "/configs/open/file-types.json"
 
 HjResult open(const char *raw_path)
 {
@@ -59,7 +59,7 @@ HjResult open(const char *raw_path)
 
     auto app_name = file_type_open_with.as_string();
 
-    auto app_path = IO::format("/Applications/{}/{}", app_name, app_name);
+    auto app_path = IO::format("/applications/{}/{}", app_name, app_name);
 
     auto *launchpad = launchpad_create(app_name.cstring(), app_path.cstring());
     launchpad_argument(launchpad, path.string().cstring());

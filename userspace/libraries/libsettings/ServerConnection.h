@@ -13,7 +13,7 @@ public:
 
     static OwnPtr<ServerConnection> open()
     {
-        auto connection = IO::Socket::connect("/Session/settings.ipc");
+        auto connection = IO::Socket::connect("/session/settings.ipc");
         return own<ServerConnection>(connection.unwrap());
     }
 

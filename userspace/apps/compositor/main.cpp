@@ -40,7 +40,7 @@ static Widget::EventType key_motion_to_event_type(KeyMotion motion)
 
 bool acquire_lock()
 {
-    Stream *socket_stream = stream_open("/Session/compositor.lock", HJ_OPEN_READ);
+    Stream *socket_stream = stream_open("/session/compositor.lock", HJ_OPEN_READ);
     if (!handle_has_error(socket_stream))
     {
         stream_close(socket_stream);
@@ -48,7 +48,7 @@ bool acquire_lock()
     }
     else
     {
-        Stream *lock_stream = stream_open("/Session/compositor.lock", HJ_OPEN_READ | HJ_OPEN_CREATE);
+        Stream *lock_stream = stream_open("/session/compositor.lock", HJ_OPEN_READ | HJ_OPEN_CREATE);
         stream_close(lock_stream);
         return true;
     }
@@ -68,7 +68,7 @@ int main(int argc, char const *argv[])
     IO::File keyboard_stream{KEYBOARD_DEVICE_PATH, HJ_OPEN_READ};
     IO::File mouse_stream{MOUSE_DEVICE_PATH, HJ_OPEN_READ};
 
-    IO::Socket socket{"/Session/compositor.ipc", HJ_OPEN_CREATE};
+    IO::Socket socket{"/session/compositor.ipc", HJ_OPEN_CREATE};
 
     auto keyboard_notifier = own<Async::Notifier>(keyboard_stream, POLL_READ, [&]() {
         KeyboardPacket packet;

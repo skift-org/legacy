@@ -157,7 +157,7 @@ $ make run CONFIG_VMACHINE=vbox # for Virtual Box
 **How to change the wallpaper?**
 
 ```sh
-µ wallpaperctl /Files/Wallpapers/paint.png
+µ wallpaperctl /files/wallpapers/paint.png
 ```
 
 ### 7. Contributing

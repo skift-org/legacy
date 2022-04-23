@@ -20,15 +20,15 @@ static Tick _last_click = 0;
 void cursor_initialize()
 {
     const char *cursor_paths[] = {
-        "/Files/Cursors/default.png",
-        "/Files/Cursors/text.png",
-        "/Files/Cursors/disabled.png",
-        "/Files/Cursors/busy.png",
-        "/Files/Cursors/move.png",
-        "/Files/Cursors/resizeh.png",
-        "/Files/Cursors/resizehv.png",
-        "/Files/Cursors/resizev.png",
-        "/Files/Cursors/resizevh.png",
+        "/files/cursors/default.png",
+        "/files/cursors/text.png",
+        "/files/cursors/disabled.png",
+        "/files/cursors/busy.png",
+        "/files/cursors/move.png",
+        "/files/cursors/resizeh.png",
+        "/files/cursors/resizehv.png",
+        "/files/cursors/resizev.png",
+        "/files/cursors/resizevh.png",
     };
 
     for (size_t i = 0; i < Widget::__CURSOR_COUNT; i++)

@@ -25,10 +25,10 @@ BOOTDISK_GZIP=$(BOOTDISK).gz
 
 RAMDISK=$(BUILDROOT)/ramdisk.tar
 
-BUILD_DIRECTORY_LIBS=$(SYSROOT)/System/Libraries
-BUILD_DIRECTORY_INCLUDE=$(SYSROOT)/System/Includes
-BUILD_DIRECTORY_APPS=$(SYSROOT)/Applications
-BUILD_DIRECTORY_UTILITIES=$(SYSROOT)/System/Utilities
+BUILD_DIRECTORY_LIBS=$(SYSROOT)/system/libraries
+BUILD_DIRECTORY_INCLUDE=$(SYSROOT)/system/includes
+BUILD_DIRECTORY_APPS=$(SYSROOT)/applications
+BUILD_DIRECTORY_UTILITIES=$(SYSROOT)/system/utilities
 
 BUILD_WARNING:= \
 	-Wall \
@@ -98,30 +98,30 @@ $(RAMDISK): $(CRTS) $(TARGETS) $(HEADERS) $(SYSROOT_CONTENT)
 	@echo [TAR] $@
 
 	@mkdir -p \
-		$(SYSROOT)/Applications \
-		$(SYSROOT)/Session \
-		$(SYSROOT)/System \
-		$(SYSROOT)/System/Utilities \
-		$(SYSROOT)/Configs \
-		$(SYSROOT)/Files/Fonts \
-		$(SYSROOT)/Files/Icons \
-		$(SYSROOT)/System/Includes \
-		$(SYSROOT)/System/Libraries \
-		$(SYSROOT)/Files \
-		$(SYSROOT)/User \
-		$(SYSROOT)/User/Applications \
-		$(SYSROOT)/User/Configs \
-		$(SYSROOT)/User/Desktop \
-		$(SYSROOT)/User/Documents \
-		$(SYSROOT)/User/Download  \
-		$(SYSROOT)/User/Movies  \
-		$(SYSROOT)/User/Music  \
-		$(SYSROOT)/User/Pictures  \
-		$(SYSROOT)/User/Public  \
-		$(SYSROOT)/User/Sites
+		$(SYSROOT)/applications \
+		$(SYSROOT)/session \
+		$(SYSROOT)/system \
+		$(SYSROOT)/system/utilities \
+		$(SYSROOT)/configs \
+		$(SYSROOT)/files/fonts \
+		$(SYSROOT)/files/icons \
+		$(SYSROOT)/system/includes \
+		$(SYSROOT)/system/libraries \
+		$(SYSROOT)/files \
+		$(SYSROOT)/user \
+		$(SYSROOT)/user/applications \
+		$(SYSROOT)/user/configs \
+		$(SYSROOT)/user/desktop \
+		$(SYSROOT)/user/documents \
+		$(SYSROOT)/user/download  \
+		$(SYSROOT)/user/movies  \
+		$(SYSROOT)/user/music  \
+		$(SYSROOT)/user/pictures  \
+		$(SYSROOT)/user/public  \
+		$(SYSROOT)/user/sites
 
 	@cp -r sysroot/* $(SYSROOT)/
-	@cp license.md $(SYSROOT)/Files
+	@cp license.md $(SYSROOT)/files
 
 	@cd $(SYSROOT); tar -cf $@ *
 

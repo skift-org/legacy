@@ -11,12 +11,11 @@
 namespace Graphic
 {
 
-static HashMap<String, RefPtr<Font>>
-    _fonts;
+static HashMap<String, RefPtr<Font>> _fonts;
 
 static ResultOr<Vec<Glyph>> font_load_glyph(String name)
 {
-    auto path = IO::format("/Files/Fonts/{}.glyph", name);
+    auto path = IO::format("/files/fonts/{}.glyph", name);
     IO::File glyph_file{path, HJ_OPEN_READ};
 
     if (!glyph_file.exist())
@@ -33,7 +32,7 @@ static ResultOr<Vec<Glyph>> font_load_glyph(String name)
 
 static ResultOr<RefPtr<Bitmap>> font_load_bitmap(String name)
 {
-    return Bitmap::load_from(IO::format("/Files/Fonts/{}.png", name));
+    return Bitmap::load_from(IO::format("/files/fonts/{}.png", name));
 }
 
 ResultOr<RefPtr<Font>> Font::get(String name)

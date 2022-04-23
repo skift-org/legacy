@@ -68,5 +68,5 @@ ResultOr<size_t> FsProcessInfo::read(FsHandle &handle, void *buffer, size_t size
 
 void process_info_initialize()
 {
-    scheduler_running()->domain().link(IO::Path::parse("/System/processes"), make<FsProcessInfo>());
+    scheduler_running()->domain().link(IO::Path::parse("/system/processes"), make<FsProcessInfo>());
 }

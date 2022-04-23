@@ -16,7 +16,7 @@ struct Repository
     static Repository load()
     {
         Repository repository;
-        IO::Directory dir_repository{"/Configs"};
+        IO::Directory dir_repository{"/configs"};
 
         for (auto entry : dir_repository.entries())
         {
@@ -25,7 +25,7 @@ struct Repository
                 continue;
             }
 
-            auto domain_path = IO::format("/Configs/{}", entry.name);
+            auto domain_path = IO::format("/configs/{}", entry.name);
             IO::Directory dir_domain{domain_path};
 
             auto domain = Domain::load(domain_path);

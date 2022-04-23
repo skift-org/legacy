@@ -3,9 +3,9 @@
         "HOME": "/User",
         "LOGNAME": "anon",
         "PATH": [
-            "/System/Utilities",
-            "/System/Posix/bin",
-            "/Applications"
+            "/system/utilities",
+            "/system/Posix/bin",
+            "/applications"
         ],
         "TERM": "xterm",
         "PWD": "/"
