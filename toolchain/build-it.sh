@@ -28,8 +28,9 @@ fi
 DEV_MODE=
 while [ "$1" != "" ]; do
     case $1 in
-        --dev )           DEV_MODE=1
-                          ;;
+        --dev )           
+            DEV_MODE=1
+            ;;
     esac
     shift
 done
