@@ -55,8 +55,8 @@ struct Application : public Widget::Application
                         label("The skift operating system.", Math::Anchor::CENTER),
                         label(__BUILD_VERSION__, Math::Anchor::CENTER),
                         label(__BUILD_GITREF__ "/" __BUILD_CONFIG__, Math::Anchor::CENTER),
-                        label("Copyright © 2018-2021", Math::Anchor::CENTER),
-                        label("N. Van Bossuyt & contributors.", Math::Anchor::CENTER),
+                        label("Copyright © 2018-2022", Math::Anchor::CENTER),
+                        label("SMNX & contributors.", Math::Anchor::CENTER),
                     })
                 ),
 
