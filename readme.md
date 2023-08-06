@@ -1,3 +1,15 @@
+<br>
+<br>
+<br>
+
+<p align="center">
+Hey! This is an outdated, un-maintained version of SkiftOS kept for posterity.<br>
+All the interesting work is now happening at the <a href="https://github.com/skift-org/skift">new repository</a>
+</p>
+
+<br>
+<br>
+<br>
 
 ![Banner](manual/header.png)
 
